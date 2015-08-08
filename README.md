@@ -1,5 +1,7 @@
 execute build.sh to build the container.
 
+it is on docker hub here: https://hub.docker.com/r/ddoc/kubernetes-mesos
+
 by default the container executes /bin/start.sh on boot
 
 example for running the container:
