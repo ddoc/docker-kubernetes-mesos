@@ -10,12 +10,12 @@ docker attach ${KMNAME}
 docker wait ${KMNAME}
 
 # TODO get libs from build container not the host running this script
-#docker cp ${KMNAME}:/target/km $(pwd)/bin/
 #docker cp ${KMNAME}:/lib64/ld-linux-x86-64.so.2 $(pwd)/lib64/
 #docker cp ${KMNAME}:/lib64/libc.so.6 $(pwd)/lib64/
 #docker cp ${KMNAME}:/lib64/libdl.so.2 $(pwd)/lib64/
 #docker cp ${KMNAME}:/lib64/libpthread.so.0 $(pwd)/lib64/libpthread.so.0
 
+docker cp ${KMNAME}:/target/km $(pwd)/bin/
 cp /lib64/ld-linux-x86-64.so.2 $(pwd)/lib64/
 cp /lib64/libc.so.6 $(pwd)/lib64/
 cp /lib64/libdl.so.2 $(pwd)/lib64/
